@@ -20,6 +20,6 @@ from apps.pokemon import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^pokemon/', include('apps.pokemon.url')),
+    url(r'^pokemon/', include('apps.pokemon.urls')),
     url(r'^apis/', include('apps.apis.urls')),
 ]
