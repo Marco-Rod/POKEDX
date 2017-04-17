@@ -1,0 +1,15 @@
+.idea
+.idea/*
+.idea/workspace.xml
+POKEDX/settings.py
+POKEDX/wsgi.py
+POKEDX/__pycache__/*
+POKEDX/__pycache__/
+apps/__pycache__/*
+apps/__pycache__/
+apps/apis/__pycache__/*
+apps/apis/__pycache__/
+apps/pokemon/__pycache__/*
+apps/pokemon/__pycache__/
+.idea/vcs.xml
+.pyc
