@@ -14,12 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.conf.urls.static import static
 from django.contrib import admin
+from rest_framework.authtoken.views import obtain_auth_token
+
+
+from POKEDX import settings
 from apps.apis import views
 from apps.pokemon import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^pokemon/', include('apps.pokemon.urls')),
+    url(r'^', include('apps.pokemon.urls')),
     url(r'^apis/', include('apps.apis.urls')),
-]
+    url(r'^api-token-auth/', obtain_auth_token)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
