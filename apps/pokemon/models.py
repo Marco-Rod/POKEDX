@@ -2,6 +2,8 @@ from django.db import models
 from model_utils import Choices
 from django.utils.translation import gettext as _
 
+from POKEDX.settings import MEDIA_ROOT
+
 
 class Region(models.Model):
     name = models.CharField(max_length=100)
@@ -31,8 +33,7 @@ class City(models.Model):
 class Town(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-    city = models.ForeignKey(City, related_name='cities')
-
+    region_town = models.ForeignKey(Region, related_name='region_town')
     class Meta:
         verbose_name = "Town"
         verbose_name_plural = "Towns"

@@ -13,3 +13,8 @@ apps/pokemon/__pycache__/*
 apps/pokemon/__pycache__/
 .idea/vcs.xml
 .pyc
+Media/
+apps/apis/migrations/__pycache__/
+#apps/pokemon/migrations/0002_remove_town_city.py
+#apps/pokemon/migrations/0003_town_region_town.py
+apps/pokemon/migrations/__pycache__/
